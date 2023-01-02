@@ -1,0 +1,11 @@
+extends layout
+
+block content 
+  form(action="/new", method="post")
+    div
+      p Message: 
+      input#messageInput(type="text", name="message")
+    div
+      p Name:
+      input#userInput(type="text", name="user")
+    div: input(type="submit", value="Post")

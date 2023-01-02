@@ -19,4 +19,9 @@ router.get('/', function (req, res, next) {
   res.render('index', { messages: messages });
 });
 
+router.post('/new', function (req, res, next) {
+  messages.push(new Message(req.body.message, req.body.user, new Date()));
+  res.redirect('/');
+});
+
 module.exports = router;
